@@ -111,7 +111,7 @@ class TodoIntegrationTest extends ContextInitializedTest {
         Todo actual = response.getBody();
         assertThat(actual).isNotNull();
         assertThat(actual.getId()).isNotNull().isNotEqualTo(3L);
-        assertThat(actual).extracting(Todo::getTitle, Todo::isCompleted).containsExactly("Test-3", true);
+        assertThat(actual).extracting(Todo::getTitle, Todo::isCompleted).containsExactly("Test-Three", true);
     }
 
     @Test
