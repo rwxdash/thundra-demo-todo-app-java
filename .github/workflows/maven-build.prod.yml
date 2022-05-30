@@ -1,6 +1,9 @@
 name: Maven Run for Production Environment
 
 on:
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
