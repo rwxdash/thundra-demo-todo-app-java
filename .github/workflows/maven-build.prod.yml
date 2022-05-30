@@ -15,12 +15,14 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+      - name: Foresight Telemetry
+        uses: thundra-io/foresight-workflow-telemetry@initial-impl
+      # - name: Cache Maven packages
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ~/.m2
+      #     key: ${{ runner.os }}-m2-${{ hashFiles('pom.xml') }}
+      #     restore-keys: ${{ runner.os }}-m2
       - name: Thundra Maven Test Instrumentation Action
         uses: thundra-io/thundra-maven-test-action@v1
         with:
