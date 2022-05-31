@@ -20,12 +20,12 @@ jobs:
         uses: thundra-io/foresight-workflow-telemetry@initial-impl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Cache Maven packages
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.m2
-      #     key: ${{ runner.os }}-m2-${{ hashFiles('pom.xml') }}
-      #     restore-keys: ${{ runner.os }}-m2
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
       - name: Thundra Maven Test Instrumentation Action
         uses: thundra-io/thundra-maven-test-action@v1
         with:
