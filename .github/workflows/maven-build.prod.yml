@@ -18,6 +18,8 @@ jobs:
           java-version: 8
       - name: Foresight Telemetry
         uses: thundra-io/foresight-workflow-telemetry@initial-impl
+        with:
+          stat_frequency: 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: satackey/action-docker-layer-caching@v0.0.11
