@@ -16,8 +16,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-      - name: Foresight Telemetry
-        uses: thundra-io/foresight-workflow-telemetry@initial-impl
+      - name: Workflow Telemetry
+        uses: thundra-io/workflow-telemetry-action@v1
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # - uses: satackey/action-docker-layer-caching@v0.0.11
